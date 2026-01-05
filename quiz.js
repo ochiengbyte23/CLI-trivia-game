@@ -1,8 +1,8 @@
-import { input } from "@inquirer/prompts";
-import chalk from "chalk";
+const { input } = require("@inquirer/prompts");
+const chalk = require("chalk");
 
-//Array of questions and answer
-export async function showQuiz() {
+// Array of questions and answer
+async function showQuiz() {
     const questions = [{
         question: "What is the chemical symbol for gold?",
         answer: "Au"
@@ -14,15 +14,15 @@ export async function showQuiz() {
     {
         question: " In what year was the first iPhone released?",
         answer: "2007"
-    }]
-    //function to check if answer is correct
+    }];
+
     let score = 0;
     const timeLimit = 5000;
 
     for (const q of questions) {
         const timer = new Promise((_, reject) => {
             setTimeout(() => { reject(new Error("timeout")) }, timeLimit);
-        })
+        });
         try {
             const answer = await Promise.race([input({ message: q.question }), timer]);
 
@@ -40,9 +40,10 @@ export async function showQuiz() {
                 throw error;
             }
         }
-
     }
     console.log(chalk.green(`Score: ${score}/${questions.length}`));
     process.exit(0);
-    return score;
 }
+
+// export the function
+module.exports = { showQuiz };

@@ -1,2 +1,2 @@
-import { showQuiz } from "./quiz.js";
+const { showQuiz } = require("./quiz");
 showQuiz();
