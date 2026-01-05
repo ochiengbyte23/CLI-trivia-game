@@ -1,0 +1,27 @@
+{
+  "name": "cli-trivia-game",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "type": "module",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ochiengbyte23/CLI-trivia-game.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ochiengbyte23/CLI-trivia-game/issues"
+  },
+  "homepage": "https://github.com/ochiengbyte23/CLI-trivia-game#readme",
+  "dependencies": {
+    "@inquirer/prompts": "^7.5.1",
+    "chalk": "^4.1.2",
+    "commander": "^13.1.0",
+    "readline-sync": "^1.4.10"
+  }
+}
